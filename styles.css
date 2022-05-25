@@ -1,0 +1,191 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-color: #333;
+        --secondary-color: #444;
+        --background-color: #f6f6f6;
+
+        --banner-bg-color: rgba(255, 255, 255, 0.75);
+        --banner-title-color: rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #f6f6f6;
+        --secondary-color: #ddd;
+        --background-color: #333;
+
+        --banner-bg-color: rgba(0, 0, 0, 0.25);
+        --banner-title-color: rgba(255, 255, 255, 0.75);
+    }
+
+    html {
+        background-color: #111;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+:root {
+    --title-font: 'Futura', 'Roboto', sans-serif;
+    --paragraph-font: 'Bodoni 72', 'Roboto Serif' serif;
+
+    --background-image: url('./la_regione.jpg');
+
+    --iPad-portrait-width: 768px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+header {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    alt: 'Un rendering del Palazzo della Regione';
+}
+
+header > div {
+    background-color: var(--banner-bg-color);
+}
+
+header > div > h1 {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: var(--banner-title-color);
+    font-family: var(--title-font);
+    font-size: 6em;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+    line-height: 0.9em;
+    margin: 0;
+    padding: 0.5em 0.25em;
+}
+
+nav {
+    background-color: var(--background-color);
+    /* padding: 0.25em; */
+}
+
+nav > ul {
+    display: grid;
+    justify-items: center;
+    align-items: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(min(10em, 50%), 1fr));
+    margin: 0;
+    padding: 0 0 1em 0;
+}
+
+nav > ul > li {
+    list-style: none;
+    border-bottom: solid 2px var(--secondary-color);
+    padding: 1em 0;
+}
+
+nav > ul > li > a {
+    font-family: var(--title-font);
+    color: var(--secondary-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    column-gap: 1em;
+    row-gap: 1em;
+
+    margin: 1em;
+}
+
+main > section:first-of-type {
+    grid-column: 1 / -1;
+}
+
+main > section:first-of-type > div {
+    column-count: auto;
+    column-gap: 3em;
+    column-width: 24em;
+    column-fill: balance;
+}
+
+section {
+    background-color: var(--background-color);
+    padding: 1em;
+    text-align: justify;
+
+    border-radius: 1em;
+
+    margin-bottom: 1em;
+}
+
+section > h1 {
+    color: var(--secondary-color);
+    font-family: var(--title-font);
+    font-size: 1.5em;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 1em;
+}
+
+section > h2 {
+    color: var(--secondary-color);
+    font-family: var(--title-font);
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.5em 0.25em;
+}
+
+p {
+    display: inline-block;
+    color: var(--primary-color);
+    font-family: var(--paragraph-font);
+}
+
+li {
+    color: var(--primary-color);
+    font-family: var(--paragraph-font);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    column-gap: 1em;
+    row-gap: 1em;
+
+    background-color: var(--background-color);
+    padding: 1em;
+}
+
+h2 > a {
+    color: var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+    section {
+        margin-bottom: 0;
+    }
+
+    header > div > h1 {
+        letter-spacing: -0.075em;
+        line-height: 1em;
+        font-size: 8em;
+    }
+}
