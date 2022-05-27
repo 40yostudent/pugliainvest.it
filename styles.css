@@ -53,6 +53,7 @@ html {
 
 #title {
     background: var(--banner-bg-color);
+    -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
 }
 
