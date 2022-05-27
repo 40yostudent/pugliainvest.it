@@ -43,7 +43,7 @@ html {
 	scroll-behavior: smooth;
 }
 
-header {
+#banner {
     background: var(--background-image);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -51,11 +51,12 @@ header {
     alt: 'Un rendering del Palazzo della Regione';
 }
 
-header > div {
+#title {
     background: var(--banner-bg-color);
+    backdrop-filter: blur(1px);
 }
 
-header > div > h1 {
+#title > h1 {
     background: var(--background-image);
     background-repeat: no-repeat;
     background-position: bottom;
