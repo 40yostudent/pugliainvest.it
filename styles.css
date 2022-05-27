@@ -44,7 +44,7 @@ html {
 }
 
 header {
-    background-image: var(--background-image);
+    background: var(--background-image);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -52,11 +52,11 @@ header {
 }
 
 header > div {
-    background-color: var(--banner-bg-color);
+    background: var(--banner-bg-color);
 }
 
 header > div > h1 {
-    background-image: var(--background-image);
+    background: var(--background-image);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
