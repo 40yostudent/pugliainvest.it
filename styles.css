@@ -37,6 +37,7 @@
     --background-image: url('./la_regione.jpg');
 
     --iPad-portrait-width: 768px;
+    --desired-column-width: 20em;
 }
 
 html {
@@ -106,7 +107,7 @@ nav > ul > li > a {
 
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--desired-column-width), 1fr));
     column-gap: 1em;
     row-gap: 1em;
 
@@ -120,14 +121,13 @@ main > section:first-of-type {
 main > section:first-of-type > div {
     column-count: auto;
     column-gap: 3em;
-    column-width: 24em;
+    column-width: var(--desired-column-width);
     column-fill: balance;
 }
 
 section {
     background-color: var(--background-color);
     padding: 1em;
-    text-align: justify;
 
     border-radius: 1em;
 
@@ -168,7 +168,7 @@ li {
 
 footer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--desired-column-width), 1fr));
     column-gap: 1em;
     row-gap: 1em;
 
