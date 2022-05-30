@@ -95,7 +95,7 @@ nav > ul {
 nav > ul > li {
     list-style: none;
     border-bottom: solid 2px var(--secondary-color);
-    padding: 1em 0;
+    padding: 1em 0 0.1em 0;
 }
 
 nav > ul > li > a {
